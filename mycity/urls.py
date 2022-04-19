@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import ProposalListAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', ProposalListAPIView.as_view(), name='proposal-list'),
 ]
